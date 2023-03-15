@@ -1,0 +1,67 @@
+---
+import "../css/style.css";
+import Header from "../components/Header.astro";
+import Card from "../components/Card.astro";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Lineup</title>
+  </head>
+  <body class="lineup">
+    <header>
+      <Header />
+    </header>
+    <main>
+      <h1>LINEUP</h1>
+      <p class="description">
+        KUNE Festival is an immersive experience that blends art, music, and the
+        island’s natural beauty. The location’s secludedness adds to the sense
+        of separation from everyday life.
+      </p>
+      <hr />
+      <div class="categories">
+        <h2>&bull;</h2>
+        <h2 class="music">MUSIC</h2>
+        <h2>&bull; ART</h2>
+        <h2>&bull; WORKSHOPS</h2>
+        <h2>&bull;</h2>
+      </div>
+      <div class="grid_1-1-1">
+        <Card header="IDA DAUGAARD">
+          <img src="/daugaard.webp" alt="Daugaard" />
+        </Card>
+        <Card header="BELLA SARRIS">
+          <img src="/sarris.webp" alt="Sarris" />
+        </Card>
+        <Card header="THORGEDUR JOHANNA">
+          <img src="/thorgedur.webp" alt="Thorgedur" />
+        </Card>
+        <Card header="PALMA">
+          <img src="/palma.webp" alt="Palma" />
+        </Card>
+        <Card header="SIMON LITTAUER">
+          <img src="/littauer.webp" alt="Littauer" />
+        </Card>
+        <Card header="THE CURIOUS INCIDENT">
+          <img src="/curious.webp" alt="The Curious Incident" />
+        </Card>
+        <Card header="VIXEN"><img src="/vixen.webp" alt="Vixen" /></Card>
+        <Card header="SYSTEEMA">
+          <img src="/systeema.webp" alt="Systeema" />
+        </Card>
+        <Card header="VERA"><img src="/vera.webp" alt="Vera" /></Card>
+      </div>
+    </main>
+    <footer></footer>
+
+    <script
+      src="https://kit.fontawesome.com/cefafbdb36.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

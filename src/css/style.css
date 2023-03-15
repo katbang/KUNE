@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap");
+@font-face {
+  font-family: "Dance";
+  font-style: normal;
+  font-weight: normal;
+  src: url("/Dance.woff");
+}
+* {
+  margin: 0;
+}
+html {
+  --fw_l: 300;
+  --fw_r: 400;
+  --fw_m: 500;
+  --fw_b: 700;
+  --bg_color: #ecf4c2;
+  --font_color: #656565;
+  --main_font: "Montserrat", sans-serif;
+  --alt_font: "Dance";
+  --secondary: #5dd6b0;
+  --box_color: hsla(161, 73%, 88%, 0.55);
+  --size_xl: 32px;
+  --size_l: 28px;
+  --size_m: 24px;
+  --size_s: 18px;
+  --size_xs: 16px;
+}
+
+img {
+  width: 100%;
+}
+/* .background {
+  -webkit-mask-image: url(/Artboard2.svg);
+  mask-image: url(/Artboard2.svg);
+  mask-size: cover;
+  -webkit-mask-size: cover;
+} */
+
+.color {
+  background: var(--bg_color);
+  background-image: url("/Artboard2.svg");
+  background-size: cover;
+}
+
+.lineup {
+  background: var(--bg_color);
+  background-image: url("/Artboard1.svg");
+  background-size: cover;
+}
+main {
+  margin: 0 auto;
+}
+h1 {
+  font-family: var(--main_font);
+  font-size: var(--size_xl);
+  font-weight: var(--fw_m);
+  color: var(--font_color);
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 30px;
+}
+.description {
+  font-family: var(--main_font);
+  font-size: var(--size_s);
+  font-weight: var(--fw_r);
+  color: var(--font_color);
+  max-width: 65ch;
+  text-align: center;
+  margin: 0 auto;
+  padding-bottom: 27px;
+}
+hr {
+  max-width: 850px;
+  margin: 0 auto;
+  color: var(--secondary);
+}
+.categories {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: var(--main_font);
+  font-size: var(--size_xs);
+  font-weight: var(--fw_l);
+  color: var(--font_color);
+  max-width: 400px;
+  padding-top: 35px;
+  padding-bottom: 55px;
+  margin: 0 auto;
+}
+.music {
+  color: var(--secondary);
+}
+
+.grid_1-1-1 {
+  max-width: 60%;
+  margin: 0 auto;
+}
+.tickets {
+  width: 65%;
+  border-radius: 20px;
+}
+
+.row_grid {
+  display: grid;
+  grid-template-rows: 3;
+  gap: 1em;
+  background-color: hsla(70, 69%, 86%, 0.81);
+}
+
+.info_grid div,
+.art_grid div {
+  padding: 70px 90px;
+}
+.info_grid h2,
+.art_grid h2 {
+  font-family: var(--alt_font);
+  font-size: var(--size_l);
+}
+.info_grid p,
+.art_grid p {
+  max-width: 65ch;
+  font-family: var(--main_font);
+  font-size: var(--size_s);
+  font-weight: var(--fw_m);
+  line-height: 26px;
+  padding-top: 20px;
+}
+
+@media (min-width: 800px) {
+  .grid_1-1-1 {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    margin-bottom: 90px;
+  }
+  .grid_1-1-1 img {
+    max-width: 100%;
+  }
+  .grid_1-1-1 h3 {
+    max-width: 100%;
+    margin-bottom: 0px;
+  }
+  .info_grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: center;
+  }
+  .art_grid {
+    display: grid;
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+  }
+}

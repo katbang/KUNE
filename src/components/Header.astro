@@ -1,0 +1,73 @@
+---
+import NavItem from "./NavItem.astro";
+---
+
+<nav>
+  <div>
+    <a href="/"><img src="/Logo.png" alt="Logo KUNE" /></a>
+    <ul>
+      <li><a href="lineup"><NavItem title="Music" /></a></li>
+      <li><NavItem title="Art" /></li>
+      <li><a href="about"><NavItem title="About" /></a></li>
+      <li><NavItem title="Tickets" /></li>
+      <li><NavItem title="Info" /></li>
+      <li><NavItem title="Gallery" /></li>
+    </ul>
+  </div>
+  <div>
+    <div class="searchbar">
+      <i class="fa-solid fa-magnifying-glass"></i><p>Search</p>
+    </div>
+    <i class="fa-solid fa-bell"></i>
+  </div>
+</nav>
+
+<style>
+  img {
+    width: 80px;
+    padding: 0 10px 0px 25px;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0px;
+  }
+  div {
+    display: flex;
+    align-items: center;
+  }
+  ul {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1em;
+    list-style: none;
+  }
+  a {
+    text-decoration: none;
+  }
+  a:visited {
+    color: var(--font_color);
+  }
+  .searchbar {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 10px 70px 10px 20px;
+  }
+  p {
+    color: var(--font_color);
+    font-family: var(--main_font);
+    font-weight: 400;
+    font-size: var(--size_xs);
+    padding-left: 20px;
+    padding-right: 100px;
+  }
+  .fa-bell {
+    padding: 0px 20px 0px 20px;
+  }
+  .fa-solid {
+    color: var(--font_color);
+  }
+</style>

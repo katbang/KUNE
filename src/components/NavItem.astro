@@ -1,0 +1,27 @@
+---
+const { title } = Astro.props;
+---
+
+<div>
+  <p>{title}</p>
+  <i class="fa-solid fa-chevron-down"></i>
+</div>
+
+<style>
+  div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  p {
+    margin-right: 8px;
+    color: var(--font_color);
+    font-family: var(--main_font);
+    font-weight: 400;
+    font-size: var(--size_xs);
+  }
+
+  .fa-chevron-down {
+    color: var(--font_color);
+  }
+</style>
