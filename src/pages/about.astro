@@ -1,6 +1,8 @@
 ---
 import "../css/style.css";
 import Header from "../components/Header.astro";
+import AboutCard from "../components/AboutCard.astro";
+import Button from "../components/Button.astro";
 ---
 
 <html lang="en">
@@ -11,11 +13,84 @@ import Header from "../components/Header.astro";
     <meta name="generator" content={Astro.generator} />
     <title>About</title>
   </head>
-  <body>
+  <body class="about">
     <header>
       <Header />
     </header>
-    <main></main>
+    <main>
+      <div class="about_container">
+        <img src="/about.webp" alt="About KUNE Festival" />
+        <h1>About</h1>
+      </div>
+      <AboutCard
+        variant="grid_1-4"
+        imgsize="medium"
+        title="The Organization"
+        imagename="/heart_people.svg"
+        imgdescription="Connection between people"
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+          quia corrupti? Doloremque autem odio, magnam sint magni pariatur
+          commodi quasi voluptates, ab in qui quia ex minus, fugit neque
+          tenetur.
+        </p>
+      </AboutCard>
+      <AboutCard
+        variant="grid_4-1"
+        imgsize="large"
+        title="Our Values"
+        imagename="/heart_between_hands.svg"
+        imgdescription="Heart between hands"
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+          quia corrupti? Doloremque autem odio, magnam sint magni pariatur
+          commodi quasi voluptates, ab in qui quia ex minus, fugit neque
+          tenetur.
+        </p>
+      </AboutCard>
+      <AboutCard
+        variant="grid_1-4"
+        imgsize="medium"
+        title="Our History"
+        imagename="/history.svg"
+        imgdescription="Book"
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+          quia corrupti? Doloremque autem odio, magnam sint magni pariatur
+          commodi quasi voluptates, ab in qui quia ex minus, fugit neque
+          tenetur.
+        </p>
+      </AboutCard>
+      <AboutCard
+        variant="grid_4-1"
+        imgsize="medium"
+        title="The Collaborators"
+        imagename="/handshake.svg"
+        imgdescription="Handshake"
+      >
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita,
+          quia corrupti? Doloremque autem odio, magnam sint magni pariatur
+          commodi quasi voluptates, ab in qui quia ex minus, fugit neque
+          tenetur.
+        </p>
+      </AboutCard>
+      <div class="gallery">
+        <div class="grid_1-1-1-1">
+          <img src="/signs.webp" alt="Signs" />
+          <img src="/memories.webp" alt="Group of girls" />
+          <img src="/community.webp" alt="People in front of sunset" />
+          <img src="/installation.webp" alt="Art installation" />
+        </div>
+        <p>Go to gallery to see more pictures from earlier events.</p>
+        <div class="button">
+          <Button />
+        </div>
+      </div>
+    </main>
     <footer></footer>
 
     <script

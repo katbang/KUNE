@@ -2,7 +2,12 @@
 import NavItem from "./NavItem.astro";
 ---
 
-<nav>
+<button id="burger-menu">
+  Menu
+  <span></span>
+</button>
+
+<nav id="menu">
   <div>
     <a href="/"><img src="/Logo.png" alt="Logo KUNE" /></a>
     <ul>
@@ -14,13 +19,15 @@ import NavItem from "./NavItem.astro";
       <li><NavItem title="Gallery" /></li>
     </ul>
   </div>
-  <div>
+  <div class="top">
     <div class="searchbar">
       <i class="fa-solid fa-magnifying-glass"></i><p>Search</p>
     </div>
     <i class="fa-solid fa-bell"></i>
   </div>
 </nav>
+
+<script src="../scripts/burger.js"></script>
 
 <style>
   img {
@@ -60,7 +67,7 @@ import NavItem from "./NavItem.astro";
     color: var(--font_color);
     font-family: var(--main_font);
     font-weight: 400;
-    font-size: var(--size_xs);
+    font-size: var(--fs_xs);
     padding-left: 20px;
     padding-right: 100px;
   }
@@ -69,5 +76,111 @@ import NavItem from "./NavItem.astro";
   }
   .fa-solid {
     color: var(--font_color);
+  }
+  #burger-menu {
+    text-indent: -9999px;
+    display: none;
+    border: none;
+    background: transparent;
+    margin: 25px;
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    position: relative;
+    z-index: 2;
+  }
+
+  @media screen and (max-width: 900px) {
+    #burger-menu {
+      display: block;
+    }
+    #burger-menu span,
+    #burger-menu span:before,
+    #burger-menu span:after {
+      background: #333;
+      display: block;
+      height: 3px;
+      opacity: 1;
+      position: absolute;
+      transition: 0.3s ease-in-out;
+      content: "";
+    }
+    #burger-menu span:before {
+      left: 0px;
+      top: -10px;
+      width: 27px;
+    }
+    #burger-menu span {
+      right: 0px;
+      top: 13px;
+      width: 27px;
+    }
+    #burger-menu span:after {
+      left: 0px;
+      top: 10px;
+      width: 27px;
+    }
+    #burger-menu.close span:before {
+      top: 0px;
+      transform: rotate(90deg);
+      width: 27px;
+      background: #fff;
+    }
+    #burger-menu.close span {
+      transform: rotate(-45deg);
+      top: 13px;
+      width: 27px;
+      background: #fff;
+    }
+    #burger-menu.close span:after {
+      top: 0px;
+      left: 0;
+      transform: rotate(90deg);
+      opacity: 0;
+      width: 0;
+      background: #fff;
+    }
+    #menu {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      z-index: 1;
+      min-width: 100%;
+      min-height: 100%;
+      position: fixed;
+      top: 0;
+      height: 0;
+      visibility: hidden;
+      opacity: 0;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 20px;
+      transition: all 0.3s ease-in-out;
+    }
+    #menu.overlay {
+      visibility: visible;
+      opacity: 1;
+      padding-top: 0px;
+      background: var(--bg_color);
+    }
+    #menu ul {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+    }
+    #menu li {
+      list-style: none;
+      display: initial;
+    }
+    #menu a {
+      color: #fff;
+      display: block;
+      margin-bottom: 30px;
+      text-decoration: none;
+    }
+    .top {
+      margin-bottom: 20px;
+      margin-left: 20%;
+    }
   }
 </style>
