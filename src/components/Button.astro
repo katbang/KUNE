@@ -1,10 +1,19 @@
 ---
+const { text, variant } = Astro.props;
 ---
 
-<p>Read more</p>
+<div>
+  <p class={variant}>{text}</p>
+  <slot />
+</div>
 
 <style>
-  p {
+  div {
+    display: flex;
+    flex: row;
+  }
+
+  .read_more {
     background-color: var(--secondary);
     font-family: var(--main_font);
     font-size: var(--fs_xs);
@@ -14,5 +23,19 @@
     width: 100px;
     padding: 10px 20px;
     border-radius: 20px;
+  }
+  .see_more {
+    background-color: var(--secondary);
+    font-family: var(--main_font);
+    font-size: var(--fs_xs);
+    font-weight: var(--fw_r);
+    text-align: center;
+    color: white;
+    width: 150px;
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
+  .fa-solid {
+    color: white;
   }
 </style>

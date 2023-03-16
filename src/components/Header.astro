@@ -8,7 +8,7 @@ import NavItem from "./NavItem.astro";
 </button>
 
 <nav id="menu">
-  <div>
+  <div id="flex">
     <a href="/"><img src="/Logo.png" alt="Logo KUNE" /></a>
     <ul>
       <li><a href="lineup"><NavItem title="Music" /></a></li>
@@ -157,6 +157,15 @@ import NavItem from "./NavItem.astro";
       padding-top: 20px;
       transition: all 0.3s ease-in-out;
     }
+    #flex {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    img {
+      width: 80px;
+      padding: 0 0px 20px 45px;
+    }
     #menu.overlay {
       visibility: visible;
       opacity: 1;
@@ -166,7 +175,9 @@ import NavItem from "./NavItem.astro";
     #menu ul {
       display: flex;
       flex-direction: column;
-      padding: 0;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 2em;
     }
     #menu li {
       list-style: none;
@@ -175,12 +186,13 @@ import NavItem from "./NavItem.astro";
     #menu a {
       color: #fff;
       display: block;
-      margin-bottom: 30px;
       text-decoration: none;
     }
     .top {
-      margin-bottom: 20px;
-      margin-left: 20%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 30px;
+      margin-left: 12%;
     }
   }
 </style>
