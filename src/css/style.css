@@ -4,6 +4,7 @@
   font-style: normal;
   font-weight: normal;
   src: url("/Dance.woff");
+  font-display: swap;
 }
 * {
   margin: 0;
@@ -38,10 +39,12 @@ html {
 }
 img {
   width: 100%;
+  height: auto;
 }
 .link {
   margin: 0;
   width: 100vw;
+  height: auto;
 }
 
 .row_grid {
@@ -72,6 +75,7 @@ img {
 .info_grid img,
 .art_grid img {
   width: 100%;
+  height: auto;
   margin: 0;
   border-radius: 10px;
 }
@@ -224,6 +228,7 @@ hr {
   }
   .link {
     width: 100%;
+    height: auto;
   }
   .container h1 {
     font-size: var(--fs_responsive);
@@ -252,6 +257,7 @@ hr {
   .info_grid img,
   .art_grid img {
     width: 100%;
+    height: auto;
     margin: 0 0;
   }
   .art_grid img {
@@ -270,6 +276,7 @@ hr {
   }
   .grid_1-1-1 img {
     max-width: 100%;
+    height: auto;
   }
   .grid_1-1-1 h3 {
     max-width: 100%;
