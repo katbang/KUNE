@@ -23,7 +23,10 @@ const { text, variant } = Astro.props;
     width: 100px;
     padding: 10px 20px;
     border-radius: 20px;
+    border: 2px solid var(--secondary);
+    cursor: pointer;
   }
+
   .see_more {
     background-color: var(--secondary);
     font-family: var(--main_font);
@@ -34,6 +37,14 @@ const { text, variant } = Astro.props;
     width: 150px;
     padding: 10px 20px;
     border-radius: 20px;
+    border: 2px solid var(--secondary);
+    cursor: pointer;
+  }
+  .read_more:hover,
+  .see_more:hover {
+    background-color: white;
+    color: var(--secondary);
+    border: 2px solid var(--secondary);
   }
   .fa-solid {
     color: white;

@@ -1,10 +1,10 @@
 ---
-const { header } = Astro.props;
+const { title, image } = Astro.props;
 ---
 
 <div class="card">
-  <slot />
-  <h3>{header}</h3>
+  <img src={image} alt={title} />
+  <h3>{title}</h3>
 </div>
 
 <style>

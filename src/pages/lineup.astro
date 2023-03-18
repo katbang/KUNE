@@ -2,6 +2,18 @@
 import "../css/style.css";
 import Header from "../components/Header.astro";
 import Card from "../components/Card.astro";
+
+const data = await fetch(
+  "https://myhdvqgrfdowvpvutnhv.supabase.co/rest/v1/KUNE",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im15aGR2cWdyZmRvd3ZwdnV0bmh2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2Nzg5NTM2ODYsImV4cCI6MTk5NDUyOTY4Nn0.Bjsfp8rT0x2cyu6zGQ39eu57En4ZAvmOOSlQmINiTKs",
+    },
+  }
+).then((res) => res.json());
+console.log(data);
 ---
 
 <html lang="en">
@@ -14,47 +26,29 @@ import Card from "../components/Card.astro";
   </head>
   <body class="lineup">
     <header>
-      <Header />
+      <Header type="lineup" />
     </header>
     <main>
       <h1>LINEUP</h1>
       <p class="description">
         KUNE Festival is an immersive experience that blends art, music, and the
-        island’s natural beauty. The location’s secludedness adds to the sense
+        island's natural beauty. The location's secludedness adds to the sense
         of separation from everyday life.
       </p>
       <hr />
       <div class="categories">
         <h2>&bull;</h2>
-        <h2 class="music">MUSIC</h2>
-        <h2>&bull; ART</h2>
-        <h2>&bull; WORKSHOPS</h2>
+        <h2 class="music">MUSIC</h2><h2>&bull;</h2>
+        <h2 id="art">ART</h2><h2>&bull;</h2>
+        <h2 id="workshop">WORKSHOPS</h2>
         <h2>&bull;</h2>
       </div>
       <div class="grid_1-1-1">
-        <Card header="IDA DAUGAARD">
-          <img src="/daugaard.webp" alt="Daugaard" />
-        </Card>
-        <Card header="BELLA SARRIS">
-          <img src="/sarris.webp" alt="Sarris" />
-        </Card>
-        <Card header="THORGEDUR JOHANNA">
-          <img src="/thorgedur.webp" alt="Thorgedur" />
-        </Card>
-        <Card header="PALMA">
-          <img src="/palma.webp" alt="Palma" />
-        </Card>
-        <Card header="SIMON LITTAUER">
-          <img src="/littauer.webp" alt="Littauer" />
-        </Card>
-        <Card header="THE CURIOUS INCIDENT">
-          <img src="/curious.webp" alt="The Curious Incident" />
-        </Card>
-        <Card header="VIXEN"><img src="/vixen.webp" alt="Vixen" /></Card>
-        <Card header="SYSTEEMA">
-          <img src="/systeema.webp" alt="Systeema" />
-        </Card>
-        <Card header="VERA"><img src="/vera.webp" alt="Vera" /></Card>
+        {
+          data.map((artist) => {
+            return <Card title={artist.title} image={artist.image} />;
+          })
+        }
       </div>
     </main>
     <footer></footer>

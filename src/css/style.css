@@ -18,19 +18,15 @@ html {
   --main_font: "Montserrat", sans-serif;
   --alt_font: "Dance";
   --secondary: #5dd6b0;
-  --box_color: hsla(161, 73%, 88%, 0.55);
+  --box_color: hsla(161, 73%, 88%, 0.5);
   --transparent: hsla(70, 69%, 86%, 0.81);
-  --s_transparent: hsla(0, 0%, 100%, 0.55);
+  --s_transparent: hsla(44, 48%, 95%, 0.55);
   --fs_xl: 32px;
   --fs_l: 28px;
   --fs_m: 24px;
   --fs_s: 18px;
   --fs_xs: 16px;
   --fs_responsive: clamp(0.6rem, 3.5vw + 1rem, 3.5rem);
-}
-
-img {
-  width: 100%;
 }
 
 /* Forside */
@@ -40,21 +36,24 @@ img {
   background-image: url("/Artboard2.svg");
   background-size: cover;
 }
+img {
+  width: 100%;
+}
 .link {
-  width: 85%;
-  border-radius: 20px;
+  margin: 0;
+  width: 100vw;
 }
 
 .row_grid {
   display: grid;
   grid-template-rows: 3;
   gap: 1em;
-  background-color: var(--transparent);
+  margin: 80px 6%;
 }
 
 .info_grid div,
 .art_grid div {
-  padding: 70px 10%;
+  padding: 70px 0;
 }
 .info_grid h2,
 .art_grid h2 {
@@ -74,6 +73,7 @@ img {
 .art_grid img {
   width: 100%;
   margin: 0;
+  border-radius: 10px;
 }
 
 /* Lineup */
@@ -112,7 +112,9 @@ hr {
 }
 .categories {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
+  align-items: center;
   font-family: var(--main_font);
   font-size: var(--fs_xs);
   font-weight: var(--fw_l);
@@ -121,6 +123,12 @@ hr {
   padding-top: 35px;
   padding-bottom: 55px;
   margin: 0 auto;
+}
+
+#art:hover,
+#workshop:hover {
+  color: var(--secondary);
+  cursor: pointer;
 }
 .music {
   color: var(--secondary);
@@ -200,10 +208,11 @@ hr {
     padding: 15% 25% 15% 25%;
   }
   .container h1 {
-    top: 15%;
+    top: 35%;
     width: 95%;
-    font-size: var(--fs_s);
+    font-size: var(--fs_m);
   }
+
   .info_grid p,
   .art_grid p {
     max-width: 100%;
@@ -214,7 +223,7 @@ hr {
     margin: 0 auto;
   }
   .link {
-    width: 65%;
+    width: 100%;
   }
   .container h1 {
     font-size: var(--fs_responsive);
@@ -230,9 +239,11 @@ hr {
     grid-template-columns: 2fr 3fr;
     align-items: center;
   }
-  .info_grid div,
+  .info_grid div {
+    padding: 70px 0;
+  }
   .art_grid div {
-    padding: 70px 90px;
+    padding: 70px 0 0 90px;
   }
   .info_grid p,
   .art_grid p {
@@ -245,6 +256,9 @@ hr {
   }
   .art_grid img {
     order: -1;
+  }
+  .categories {
+    flex-direction: row;
   }
   .grid_1-1-1 {
     max-width: 1000px;
