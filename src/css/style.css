@@ -142,7 +142,14 @@ hr {
   max-width: 60%;
   margin: 0 auto;
 }
-
+.grid_1-1-1 h2 {
+  text-align: center;
+  font-family: var(--alt_font);
+  font-size: var(--fs_m);
+  color: var(--font_color);
+  margin-top: 10px;
+  margin-bottom: -10px;
+}
 /* About */
 
 .about {
