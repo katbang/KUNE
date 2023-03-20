@@ -41,12 +41,26 @@ img {
   width: 100%;
   height: auto;
 }
+.hero {
+  aspect-ratio: 1900/1063;
+  height: 100%;
+  width: 100%;
+}
 .link {
   margin: 0;
-  width: 100vw;
   height: auto;
 }
+#tickets {
+  aspect-ratio: 1400/550;
+  height: 100%;
+  width: 100%;
+}
 
+#volunteer {
+  aspect-ratio: 1400/537;
+  height: 100%;
+  width: 100%;
+}
 .row_grid {
   display: grid;
   grid-template-rows: 3;
@@ -74,6 +88,8 @@ img {
 
 .info_grid img,
 .art_grid img {
+  aspect-ratio: 800/520;
+  height: 100%;
   width: 100%;
   height: auto;
   margin: 0;
@@ -172,6 +188,12 @@ hr {
   font-size: 100px;
 }
 
+.about_container img {
+  aspect-ratio: 2000/648;
+  height: 100%;
+  width: 100%;
+}
+
 .grid_1-4 p {
   font-family: var(--main_font);
   font-size: var(--fs_xs);
@@ -201,6 +223,9 @@ hr {
   gap: 1em;
 }
 .gallery img {
+  aspect-ratio: 1/1;
+  height: 100%;
+  width: 100%;
   border-radius: 15px;
 }
 .gallery p {

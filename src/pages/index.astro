@@ -17,9 +17,9 @@ import Link from "../components/Link.astro";
       <Header type="normal" />
     </header>
     <main>
-      <img src="/Hero.webp" alt="KUNE Festival" />
+      <img class="hero" src="/Hero.webp" alt="KUNE Festival" />
       <Link title="GET YOUR TICKETS HERE">
-        <img class="link" src="/tickets.webp" alt="Tickets" />
+        <img id="tickets" class="link" src="/tickets.webp" alt="Tickets" />
       </Link>
       <div class="row_grid">
         <div class="info_grid">
@@ -73,7 +73,12 @@ import Link from "../components/Link.astro";
       </div>
 
       <Link title="VOLUNTEER RECRUITMENT">
-        <img class="link" src="/volunteer.webp" alt="Volunteer" />
+        <img
+          id="volunteer"
+          class="link"
+          src="/volunteer.webp"
+          alt="Volunteer"
+        />
       </Link>
     </main>
     <footer></footer>
