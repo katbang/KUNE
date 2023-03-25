@@ -155,13 +155,14 @@ hr {
 }
 
 .grid_1-1-1 {
-  max-width: 60%;
+  max-width: 70%;
   margin: 0 auto;
 }
 
 .grid_1-1-1 h2 {
   visibility: hidden;
 }
+
 /* About */
 
 .about {
@@ -319,6 +320,7 @@ hr {
     margin-bottom: -10px;
     visibility: visible;
   }
+
   .grid_1-4 p {
     margin: 0px 0px 30px 50px;
   }

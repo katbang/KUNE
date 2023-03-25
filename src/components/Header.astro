@@ -47,9 +47,8 @@ const { type } = Astro.props;
     </ul>
   </div>
   <div class="top">
-    <div class="searchbar">
-      <i class="fa-solid fa-magnifying-glass"></i><p>Search</p>
-    </div>
+    <label for="site-search"></label>
+    <input type="search" id="site-search" name="q" placeholder="Search" />
     <i class="fa-solid fa-bell"></i>
   </div>
 
@@ -140,11 +139,8 @@ const { type } = Astro.props;
     a:visited {
       color: var(--font_color);
     }
-    .searchbar {
-      background-color: white;
-      display: flex;
-      align-items: center;
-      padding: 10px 70px 10px 20px;
+    input {
+      padding: 10px 50px 10px 20px;
     }
     p {
       color: var(--font_color);
